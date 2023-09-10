@@ -124,12 +124,12 @@ html{
 
 /*animation text begins */
 
-h1{
+h3{
     width: 100%;
     color: #7e9dcb97;
     font-family: Garamond;
 }
-h1 span
+h3 span
 {
     opacity: 0;
     animation: animate 1s linear forwards;
@@ -152,41 +152,41 @@ h1 span
 }
 }
 
-h1 span:nth-child(1)
+h3 span:nth-child(1)
 {
     animation-delay: 1s;
 }
-h1 span:nth-child(2)
+h3 span:nth-child(2)
 {
     animation-delay: 1.5s;
 }
-h1 span:nth-child(3)
+h3 span:nth-child(3)
 {
     animation-delay:2s;
 }
-h1 span:nth-child(4)
+h3 span:nth-child(4)
 {
     animation-delay: 2.5s;
 }
-h1 span:nth-child(5)
+h3 span:nth-child(5)
 {
     animation-delay: 3S;
 }
-h1 span:nth-child(6)
+h3 span:nth-child(6)
 {
     animation-delay: 3.5s;
 }
-h1 span:nth-child(7)
+h3 span:nth-child(7)
 {
     animation-delay: 4s;
 }
-h1 span:nth-child(8)
+h3 span:nth-child(8)
 {
     animation-delay: 4.5s;
-}h1 span:nth-child(9)
+}h3 span:nth-child(9)
 {
     animation-delay: 5s;
-}h1 span:nth-child(10)
+}h3 span:nth-child(10)
 {
     animation-delay: 5.5s;
 }
