@@ -1,3 +1,6 @@
+.word:hover {
+    color: #a1e6c5; /* Changeing the text color to blue on hover */
+}
 body{
     background-color: rgb(236,255,246);
     min-height: 100vh;
