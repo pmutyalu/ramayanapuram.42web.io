@@ -125,9 +125,10 @@ html{
 /*animation text begins */
 
 h3{
-    width: 100%;
     color: #7e9dcb97;
     font-family: Garamond;
+    font-size: 2em;
+    text-align: top;
 }
 h3 span
 {
