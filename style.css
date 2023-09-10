@@ -50,6 +50,8 @@ html{
     }
     img:hover{
         transform: translateZ(20px);
+        transform: scale(1.1); /*this  increase the size by 10% on hover -> updated after feeds section written*/
+        transition: transform 0.3s ease; /*this will make an  Smooth transition effect -> updated after feeds section written*/
     }
     video{
         width: 100%;
