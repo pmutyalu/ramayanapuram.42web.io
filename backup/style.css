@@ -1,0 +1,213 @@
+.word:hover {
+    color: #a1e6c5; /* Changeing the text color to blue on hover */
+}
+body{
+    background-color: rgb(236,255,246);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+    .slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+    }
+
+    .slide-track:hover {
+    animation-play-state: paused;
+    }
+    @keyframes scroll{
+        0%{
+            transform: translatex(250px);
+        }
+        100%{
+            transform: translatex(calc(-250px * 9));
+        }
+    }
+    .slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+    }
+    img{
+        width: 100%;
+        transition: transform 1s;
+    }
+    img:hover{
+        transform: translateZ(20px);
+        transform: scale(1.1); /*this  increase the size by 10% on hover -> updated after feeds section written*/
+        transition: transform 0.3s ease; /*this will make an  Smooth transition effect -> updated after feeds section written*/
+    }
+    video{
+        width: 100%;
+        transition: transform 1s;
+    }
+    video:hover{
+        transform: translateZ(20px);
+    }
+.slider::before,
+.slider::after{
+    background: linear-gradient (to right, rgba(255, 255, 255, 1)0%,
+    rgba(255, 255, 255, 0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slide-text {
+    display: none;;
+    position: absolute;
+    top: 0%; /* Adjusting as needed to center the text vertically */
+    left: 20%; /* Adjusting as needed to center the text horizontally */
+    transform: translate(-50%, -50%);
+    background-color: rgba(176, 166, 166, 0.7);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    z-index: 1; /* Ensureing text is above the image */
+}
+
+/* Showing the slide text when hovering over the slide */
+.slide:hover .slide-text {
+    display: block;
+}
+
+/* Adding styling for the slide text (you can customize this) */
+.slide-text {
+    background-color: rgb(172, 194, 181);
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Ensure that images and videos inside .slide are centered and cover the entire .slide */
+.slide img,
+.slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+/* Add hover effect for both images and videos */
+.slide:hover img,
+.slide:hover video {
+    transform: translateZ(20px);
+}
+
+/*animation text begins */
+
+h3{
+    color: #7e9dcb97;
+    font-family: Garamond;
+    font-size: 2em;
+    text-align: top;
+}
+h3 span
+{
+    opacity: 0;
+    animation: animate 1s linear forwards;
+    -webkit-animation: animate 1s linear forwards;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+}
+100%
+{
+        opacity: 1;
+        transform: matrix3d(546);
+        filter: blur(0px);
+
+}
+}
+
+h3 span:nth-child(1)
+{
+    animation-delay: 1s;
+}
+h3 span:nth-child(2)
+{
+    animation-delay: 1.5s;
+}
+h3 span:nth-child(3)
+{
+    animation-delay:2s;
+}
+h3 span:nth-child(4)
+{
+    animation-delay: 2.5s;
+}
+h3 span:nth-child(5)
+{
+    animation-delay: 3S;
+}
+h3 span:nth-child(6)
+{
+    animation-delay: 3.5s;
+}
+h3 span:nth-child(7)
+{
+    animation-delay: 4s;
+}
+h3 span:nth-child(8)
+{
+    animation-delay: 4.5s;
+}h3 span:nth-child(9)
+{
+    animation-delay: 5s;
+}h3 span:nth-child(10)
+{
+    animation-delay: 5.5s;
+}
+/*Animation ends here*/
+
+
+
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e{
+    width: 900px;
+    background-color: azure;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    outline: none;
+    border-color: #a4dabf;
+}
