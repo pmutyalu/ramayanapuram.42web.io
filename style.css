@@ -4,6 +4,7 @@
 *{
     font-family: 'Dosis', sans-serif;
     font-family: 'EB Garamond', serif;
+    text-decoration: wavy;
 }
 body{
     background-color: rgb(255, 255, 255);
@@ -126,6 +127,11 @@ html{
     transform: translateZ(20px);
 }
 
+
+
+
+
+
 /*animation text begins */
 
 /* h3{
@@ -197,3 +203,35 @@ h3 span:nth-child(8)
 } */
 /*Animation ends here*/
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f2f2;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+    text-decoration: overline;
+  }
+  
+  .header a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(14, 10, 10);
+    margin: 0 10px;
+  }
+  
+  .header img {
+    height: 60px;
+    width: auto;
+  }
+  
+  /* Add some padding to the body so that content doesn't get hidden behind the fixed header */
+  body {
+    padding-top: 70px; /* Adjust as needed based on your header height */
+  }
+  
+  
