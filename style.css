@@ -124,7 +124,7 @@ html{
 
 /*animation text begins */
 
-h3{
+/* h3{
     color: #7e9dcb97;
     font-family: Garamond;
     font-size: 2em;
@@ -190,24 +190,6 @@ h3 span:nth-child(8)
 }h3 span:nth-child(10)
 {
     animation-delay: 5.5s;
-}
+} */
 /*Animation ends here*/
 
-
-
-.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e{
-    width: 900px;
-    background-color: azure;
-    border: 2px solid transparent;
-    padding: 32px 24px;
-    font-size: 14px;
-    font-family: inherit;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-sizing: border-box;
-    border-radius: 35px;
-    outline: none;
-    border-color: #a4dabf;
-}
