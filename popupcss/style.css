@@ -18,8 +18,8 @@
   border-radius: 30px;
 }
 .popup {
-  width: 60%; /*to Adjust the width as needed */
-  max-width: 900px; /* Add a max-width for responsiveness */
+  width: 50%; /*to Adjust the width as needed */
+  max-width: 800px; /* Add a max-width for responsiveness */
   height: 53vh; /* Adjust the height as needed */
   width: 400px;
   background: #96b8b5;

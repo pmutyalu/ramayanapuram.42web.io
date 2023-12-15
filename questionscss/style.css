@@ -1,0 +1,124 @@
+.cards-container {
+    column-count: 2;
+    column-gap: 30px;
+  }
+
+  .card {
+      box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+      background-color: var(--container-color);
+      border-radius: .25rem;
+      position: relative;
+      transition: all .25s ease;
+    }
+    
+    .card::after {
+      content: '';
+      background-color: var(--first-color);
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: .25rem 0 0 .25rem;
+    }
+    
+    .card:nth-child(1) {
+      background-color: #fff7f0;
+    }
+    
+    .card:nth-child(1)::after {
+      background-color: #ffc08a;
+    }
+    
+    .card:nth-child(2) {
+      background-color: #f0f0ff;
+    }
+    
+    .card:nth-child(2)::after {
+      background-color: #8a8aff;
+    }
+    
+    .card:nth-child(3) {
+      background-color: #fff0f3;
+    }
+    
+    .card:nth-child(3)::after {
+      background-color: #ff8aa1;
+    }
+    
+    .card:nth-child(4) {
+      background-color: #f0faff;
+    }
+    
+    .card:nth-child(4)::after {
+      background-color: #8ad8ff;
+    }
+
+
+
+
+
+
+     
+    .card:nth-child(5) {
+      background-color: #f0f0ff;
+    }
+    
+    .card:nth-child(5)::after {
+      background-color: #8a8aff;
+    }
+    
+    .card:nth-child(6) {
+      background-color: #fff0f3;
+    }
+    
+    .card:nth-child(6)::after {
+      background-color: #ff8aa1;
+    }
+    .card:nth-child(7) {
+      background-color: #f0f0ff;
+    }
+    
+    .card:nth-child(7)::after {
+      background-color: #8a8aff;
+    }
+    
+    .card:nth-child(8) {
+      background-color: #fff0f3;
+    }
+    
+    .card:nth-child(8)::after {
+      background-color: #ff8aa1;
+    }
+  
+  .card {
+    background-color: #fff7f0;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    break-inside: avoid; /* Prevent column breaks within cards */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card h3 {
+      margin-left: 30px; /* Added margin to create space between the arrow icon and text */
+    
+  }
+h1{
+  font-size: 30px;
+}
+   .arrow-icon {
+
+      transform: rotate(45deg);
+
+  }
+
+  .answer {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+  }
