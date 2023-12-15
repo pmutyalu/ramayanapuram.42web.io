@@ -23,6 +23,7 @@ html{
     display: grid;
     place-items: center;
     overflow: hidden;
+    /* z-index: 1000; */
 }
     .slide-track {
     display: flex;

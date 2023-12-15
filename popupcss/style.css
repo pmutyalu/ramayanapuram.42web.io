@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EB Garamond', serif;  font-size: 17px;
+  line-height: 1.55; /* You can adjust this value */
+}
+
+
+.btn {
+  padding: 10px 60px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+.popup {
+  width: 60%; /*to Adjust the width as needed */
+  max-width: 900px; /* Add a max-width for responsiveness */
+  height: 53vh; /* Adjust the height as needed */
+  width: 400px;
+  background: #96b8b5;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  border-radius: 20px; /* Add border-radius for rounded corners */
+  z-index: 1001;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup img {
+  width: 80px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+button {
+  --color: black;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  margin: 20px; /*space betwen above text*/
+  font-size: 17px;
+  z-index: 1;
+  border: 1;
+  border-radius: 0;
+  position: relative;
+  border-radius: 10px;  
+  /* border-bottom-left-radius: 10px;   //css for each side
+  border-top-left-radius: 10px;  
+  border-bottom-right-radius: 10px;    */
+
+}
+
+button::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+button:hover {
+  color: white;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: .3s all;
+}
+
+button:hover::before {
+  top: -30px;
+  left: -30px;
+}

@@ -2,16 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/shrimp-icon-boiled-prawn-shell-white-background_638232-313.jpg?w=740">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/shrimp-icon-boiled-prawn-shell-white-background_638232-313.jpg?w=740">
             <title>Aqua Yodha</title>
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Dosis&family=EB+Garamond:ital,wght@0,500;1,800&display=swap" rel="stylesheet">
             <link href="style.css" rel="stylesheet"/>
+            
+            <!-- styles snd fonts for the pop-up -->
+            
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="popupcss/style.css" />
     </head>
     <body>
 
+        <!-- pop-up starts here -->
+
+        <div class="popup" id="popup">
+            <img src="popupimage/logo.png" loading="lazy" alt="404-tick" />
+            <!-- <h3><b>𝐺𝑟𝑒𝑎𝑡 𝑡𝑜 𝑠𝑒𝑒 𝑦𝑜𝑢 ℎ𝑒𝑟𝑒!</h3><br> -->
+            <p>Welcome This video is a little peek into our project <b>AQUAYODHA </b></p>
+            <p>To visit the website click on visit website..</p>
+            <iframe width="300" height="150" src="https://www.youtube.com/embed/XVfSe9UuyF4" title="eYIC#197 Prototyping Sprint" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button onclick="closePopup()" type="button" id="okButton">
+              <span>Vsit Website</span>
+            </button>
+        </div>
+        <script src="popupjs/main.js"></script>
+
+
+        <!-- pop-up ends here -->
         <div class="header">
             <img src="https://thenounproject.com/api/private/icons/4974962/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" height="100" width="65">
             <a href="#Home">Home</a>
@@ -20,7 +43,6 @@
             <a href="#Map">Map</a>
             <a href="#contact Us">Contact Us</a>
         </div>
-
         <!--original header 
             
             
@@ -160,7 +182,7 @@
         <a href="https://www.indiamart.com/proddetail/godrej-popular-premium-sinking-polyculture-feed-2851448511748.html"><img src="imgs/popular.png" height="340" width="90">
                 <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>Popular -fish & prawns feed</span></span></span></a>
+                    <span><span class="word"><span>Popular</span></span></span></a>
                 </li>
             </article>
         </td>
@@ -170,7 +192,7 @@
             <a href="https://www.indiamart.com/proddetail/ratan-premium-polyculture-feed-2851448513012.html"><img src="imgs/ratan.png" height="350" width="90">
                 <div class="backdrop"></div>
             <li>
-                <span><span class="word"><span>Ratan -fish & prawns feed</span></span></span></a>
+                <span><span class="word"><span>Ratan</span></span></span></a>
             </li>
         </article>
         </td>
@@ -180,7 +202,7 @@
             <a href="https://www.unofeeds.in/product.html"><img src="imgs/uno.png" height="320" width="90">
                 <div class="backdrop"></div>
             <li>
-                <span><span class="word"><span>UNO -fish & prawns feed</span></span></span></a>
+                <span><span class="word"><span>UNO</span></span></span></a>
             </li>
             </article>
         </td>
@@ -190,7 +212,7 @@
                 <a href="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-Polyculture-1.pdf"><img src="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-polyculture.jpg" height="320" width="90">
                     <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>Growel -fish & prawns feed</span></span></span></a>
+                    <span><span class="word"><span>Growel</span></span></span></a>
                 </li>
                 </article>
             </td>
@@ -200,7 +222,7 @@
                     <a href="https://40count.com/product/falcon-polymax-285-polyculture-feed/"><img src="https://40count.com/wp-content/uploads/2023/06/Polyculture-Feed-Front-.jpeg" height="320" width="90">
                         <div class="backdrop"></div>
                     <li>
-                        <span><span class="word"><span>Falcon -fish & prawns feed</span></span></span></a>
+                        <span><span class="word"><span>Falcon</span></span></span></a>
                     </li>
                     </article>
                 </td>
@@ -218,7 +240,7 @@
                 <a href="https://www.indiamart.com/proddetail/godrej-fish-feed-22762990933.html"><img src="https://5.imimg.com/data5/SELLER/Default/2020/10/MO/IX/UY/4665114/godrej-fish-feed-500x500.jpg" height="320" width="115">
                 <div class="backdrop"></div>
                 <li>
-                <span><span class="word"><span>Vrudhi -fish feed</span></span></span></a>
+                <span><span class="word"><span>Vrudhi</span></span></span></a>
                 </li>
             </article>
             </td>
@@ -227,7 +249,7 @@
                 <a href="https://www.indiamart.com/proddetail/aruna-imcarp-feed-21302098748.html"><img src="https://5.imimg.com/data5/LL/KT/ES/SELLER-21754606/aruna-imcarp-feed.PNG" height="320" width="115">
                     <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>Aruna -fish feed</span></span></span></a>
+                    <span><span class="word"><span>Aruna</span></span></span></a>
                 </li>
             </article>
             </td>
@@ -237,7 +259,7 @@
 
                     <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>Kingfish -fish feed</span></span></span></a>
+                    <span><span class="word"><span>Kingfish</span></span></span></a>
                 </li>
             </article>
             </td>        
@@ -247,7 +269,7 @@
 
                     <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>Growel -fish feed</span></span></span></a>
+                    <span><span class="word"><span>Growel</span></span></span></a>
                 </li>
             </article>
             </td>
@@ -256,7 +278,7 @@
                 <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html"><img src="imgs/uno.png" height="320" width="115">
                     <div class="backdrop"></div>
                 <li>
-                    <span><span class="word"><span>UNO -fish feed</span></span></span></a>
+                    <span><span class="word"><span>UNO</span></span></span></a>
                 </li>
                 </article>
             </td>
@@ -274,7 +296,7 @@
                     <a href="https://avantifeeds.com/division-feeds/"><img src="https://avantifeeds.com/v2/wp-content/uploads/2021/05/avantifeedbags.png" height="320" width="90">
                     <div class="backdrop"></div>
                     <li>
-                    <span><span class="word"><span>Avanti -prawns feed</span></span></span></a>
+                    <span><span class="word"><span>Avanti</span></span></span></a>
                     </li>
                 </article>
                 </td>
@@ -283,7 +305,7 @@
                         <a href="https://uniaqua.com.vn/the-uni"><img src="imgs/uni.png" height="320" width="90">
                             <div class="backdrop"></div>
                         <li>
-                            <span><span class="word"><span>UNI -prawns feed</span></span></span></a>
+                            <span><span class="word"><span>UNI</span></span></span></a>
                         </li>
                     </article>
                     </td>
@@ -293,7 +315,7 @@
                             <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html"><img src="imgs/blanca.png" height="370" width="90">
                                 <div class="backdrop"></div>
                             <li>
-                                <span><span class="word"><span>Blanca -prawns feed</span></span></span></a>
+                                <span><span class="word"><span>Blanca</span></span></span></a>
                             </li>
                             </article>
                     </td>       
@@ -303,7 +325,7 @@
 
                         <div class="backdrop"></div>
                     <li>
-                        <span><span class="word"><span>Ifeed -prawns feed</span></span></span></a>
+                        <span><span class="word"><span>Ifeed</span></span></span></a>
                     </li>
                 </article>
                 </td>
@@ -313,7 +335,7 @@
             
                             <div class="backdrop"></div>
                         <li>
-                            <span><span class="word"><span>Growel -prawns feed</span></span></span></a>
+                            <span><span class="word"><span>Growel</span></span></span></a>
                         </li>
                     </article>
                     </td>
