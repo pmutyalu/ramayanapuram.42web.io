@@ -21,6 +21,9 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
             <link rel="stylesheet" href="questionscss/style.css" />
 
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/mmLHZpsYMDHeq4D6/scene.splinecode"></spline-viewer>
+
 </head>
     <body>
 
@@ -31,9 +34,11 @@
             <!-- <h3><b>𝐺𝑟𝑒𝑎𝑡 𝑡𝑜 𝑠𝑒𝑒 𝑦𝑜𝑢 ℎ𝑒𝑟𝑒!</h3><br> -->
             <p>Welcome This video is a little peek into our project <b>AQUAYODHA </b></p>
             <p>To visit the website click on visit website..</p>
-            <iframe width="300" height="150" src="https://www.youtube.com/embed/XVfSe9UuyF4" title="eYIC#197 Prototyping Sprint" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="responsive-iframe" style="padding-bottom: 50%; margin: 10px 0;">
+                <iframe src="https://www.youtube.com/embed/XVfSe9UuyF4" title="eYIC#197 Prototyping Sprint" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
             <button onclick="closePopup()" type="button" id="okButton">
-              <span>Vsit Website</span>
+              <span>Visit Website</span>
             </button>
         </div>
         <script src="popupjs/main.js"></script>
@@ -41,12 +46,21 @@
 
         <!-- pop-up ends here -->
         <div class="header">
-            <img src="https://thenounproject.com/api/private/icons/4974962/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" height="100" width="65">
-            <a href="#Home">Home</a>
-            <a href="#Feeds">Feeds</a>
-            <a href="#Weather">Weather</a>
-            <a href="#Map">Map</a>
-            <a href="#contact Us">Contact Us</a>
+            <img src="https://thenounproject.com/api/private/icons/4974962/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="Logo">
+            
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#Home">Home</a>
+                <a href="#Feeds">Feeds</a>
+                <a href="#Weather">Weather</a>
+                <a href="#Map">Map</a>
+                <a href="#contact Us">Contact Us</a>
+            </nav>
         </div>
         <!--original header  
 
@@ -114,9 +128,11 @@
         <br>
         <br>
         <br>
-        <div id="Home"></div>
-        <br>
-        <p style="font-size: 20px;">Ramayanapuram is a small Village in Bhimavaram Mandal in West Godavari District of Andhra Pradesh State, India. It comes under Dirusumarru Panchayath. It belongs to Andhra region . It is located 59 KM towards East from District head quarters Eluru. 9 KM from Bhimavaram.Ramayanapuram Pin code is 534239 and postal head office is Dirusumarru .</p>
+        <div class="content-wrapper">
+            <div id="Home"></div>
+            <br>
+            <p>Ramayanapuram is a small Village in Bhimavaram Mandal in West Godavari District of Andhra Pradesh State, India. It comes under Dirusumarru Panchayath. It belongs to Andhra region . It is located 59 KM towards East from District head quarters Eluru. 9 KM from Bhimavaram.Ramayanapuram Pin code is 534239 and postal head office is Dirusumarru .</p>
+        </div>
         <br>
         <br>
         <br>
@@ -174,186 +190,119 @@
     <br>
     <br>
 
-    <!-- /* Adding feeds section*/
-
-    /*polyculture feeds*/ -->
-    <h1>
-        Feeds
-    </h1>
-    <p style="font-size: 20px;">
-        Feeds play a noteworthy role in aquafarming. So, in accordance with good supply of feed, better results can be achieved. These are some of the most used feeds by local aquafarmers.
-    </p><br>
-    <div id="Feeds"></div>
-    <h1>Polyculture Feeds Used in Farming..</h1>
-    <table width="101%">
-    <tr>
-
-        <td>
-        <article>
-        <a href="https://www.indiamart.com/proddetail/godrej-popular-premium-sinking-polyculture-feed-2851448511748.html"><img src="imgs/popular.png" height="340" width="90">
-                <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>Popular</span></span></span></a>
-                </li>
-            </article>
-        </td>
-
-        <td>
-        <article>
-            <a href="https://www.indiamart.com/proddetail/ratan-premium-polyculture-feed-2851448513012.html"><img src="imgs/ratan.png" height="350" width="90">
-                <div class="backdrop"></div>
-            <li>
-                <span><span class="word"><span>Ratan</span></span></span></a>
-            </li>
-        </article>
-        </td>
-
-        <td>
-        <article>
-            <a href="https://www.unofeeds.in/product.html"><img src="imgs/uno.png" height="320" width="90">
-                <div class="backdrop"></div>
-            <li>
-                <span><span class="word"><span>UNO</span></span></span></a>
-            </li>
-            </article>
-        </td>
-
-        <td>
-            <article>
-                <a href="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-Polyculture-1.pdf"><img src="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-polyculture.jpg" height="320" width="90">
-                    <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>Growel</span></span></span></a>
-                </li>
-                </article>
-            </td>
-
-            <td>
-                <article>
-                    <a href="https://40count.com/product/falcon-polymax-285-polyculture-feed/"><img src="https://40count.com/wp-content/uploads/2023/06/Polyculture-Feed-Front-.jpeg" height="320" width="90">
-                        <div class="backdrop"></div>
-                    <li>
-                        <span><span class="word"><span>Falcon</span></span></span></a>
-                    </li>
-                    </article>
-                </td>
-    </tr>
-    </table>
+    <!-- Adding feeds section -->
+    <div class="feeds-container">
+        <h1>Feeds</h1>
+        <p>Feeds play a noteworthy role in aquafarming. So, in accordance with good supply of feed, better results can be achieved. These are some of the most used feeds by local aquafarmers.</p>
+        
+        <div id="Feeds"></div>
+        <h1>Polyculture Feeds Used in Farming..</h1>
+        
+        <div class="feed-grid">
+            <div class="feed-item">
+                <a href="https://www.indiamart.com/proddetail/godrej-popular-premium-sinking-polyculture-feed-2851448511748.html">
+                    <img src="imgs/popular.png" alt="Popular Feed">
+                    <div class="word">Popular</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://www.indiamart.com/proddetail/ratan-premium-polyculture-feed-2851448513012.html">
+                    <img src="imgs/ratan.png" alt="Ratan Feed">
+                    <div class="word">Ratan</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://www.unofeeds.in/product.html">
+                    <img src="imgs/uno.png" alt="UNO Feed">
+                    <div class="word">UNO</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-Polyculture-1.pdf">
+                    <img src="https://growelgroup.com/wp-content/uploads/2022/10/Carpmax-polyculture.jpg" alt="Growel Feed">
+                    <div class="word">Growel</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://40count.com/product/falcon-polymax-285-polyculture-feed/">
+                    <img src="https://40count.com/wp-content/uploads/2023/06/Polyculture-Feed-Front-.jpeg" alt="Falcon Feed">
+                    <div class="word">Falcon</div>
+                </a>
+            </div>
+        </div>
     <br>
 
-    <!-- /*Fish feed */ -->
-
+    <!-- Fish feed -->
     <h1>Fish Feeds Used in Farming..</h1>
-    <table width="88%" cellspacing="40">
-        <tr>
-            <td>
-            <article>
-                <a href="https://www.indiamart.com/proddetail/godrej-fish-feed-22762990933.html"><img src="https://5.imimg.com/data5/SELLER/Default/2020/10/MO/IX/UY/4665114/godrej-fish-feed-500x500.jpg" height="320" width="115">
-                <div class="backdrop"></div>
-                <li>
-                <span><span class="word"><span>Vrudhi</span></span></span></a>
-                </li>
-            </article>
-            </td>
-            <td>
-            <article>
-                <a href="https://www.indiamart.com/proddetail/aruna-imcarp-feed-21302098748.html"><img src="https://5.imimg.com/data5/LL/KT/ES/SELLER-21754606/aruna-imcarp-feed.PNG" height="320" width="115">
-                    <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>Aruna</span></span></span></a>
-                </li>
-            </article>
-            </td>
-            <td>
-            <article>
-                <a href="https://www.indiamart.com/proddetail/4-mm-kingfish-floating-fish-feed-22541336848.html"><img src="imgs/kingfish.png" height="320" width="115">
-
-                    <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>Kingfish</span></span></span></a>
-                </li>
-            </article>
-            </td>        
-            <td>
-            <article>
-                <a href="https://growelgroup.com/wp-content/uploads/2022/10/Fishmax-1.pdf"><img src="https://growelgroup.com/wp-content/uploads/2022/10/Fishmax-Bag.jpg" height="320" width="115">
-
-                    <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>Growel</span></span></span></a>
-                </li>
-            </article>
-            </td>
-            <td>
-            <article>
-                <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html"><img src="imgs/uno.png" height="320" width="115">
-                    <div class="backdrop"></div>
-                <li>
-                    <span><span class="word"><span>UNO</span></span></span></a>
-                </li>
-                </article>
-            </td>
-        </tr>
-
-    <!-- /*Prawns feed */  -->
-
-        </table>
+    <div class="feed-grid">
+        <div class="feed-item">
+            <a href="https://www.indiamart.com/proddetail/godrej-fish-feed-22762990933.html">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/MO/IX/UY/4665114/godrej-fish-feed-500x500.jpg" alt="Vrudhi Fish Feed">
+                <div class="word">Vrudhi</div>
+            </a>
+        </div>
+        <div class="feed-item">
+            <a href="https://www.indiamart.com/proddetail/aruna-imcarp-feed-21302098748.html">
+                <img src="https://5.imimg.com/data5/LL/KT/ES/SELLER-21754606/aruna-imcarp-feed.PNG" alt="Aruna Fish Feed">
+                <div class="word">Aruna</div>
+            </a>
+        </div>
+        <div class="feed-item">
+            <a href="https://www.indiamart.com/proddetail/4-mm-kingfish-floating-fish-feed-22541336848.html">
+                <img src="imgs/kingfish.png" alt="Kingfish Feed">
+                <div class="word">Kingfish</div>
+            </a>
+        </div>
+        <div class="feed-item">
+            <a href="https://growelgroup.com/wp-content/uploads/2022/10/Fishmax-1.pdf">
+                <img src="https://growelgroup.com/wp-content/uploads/2022/10/Fishmax-Bag.jpg" alt="Growel Fish Feed">
+                <div class="word">Growel</div>
+            </a>
+        </div>
+        <div class="feed-item">
+            <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html">
+                <img src="imgs/uno.png" alt="UNO Fish Feed">
+                <div class="word">UNO</div>
+            </a>
+        </div>
+    </div>
         <br>
         <h1>Prawns Feeds Used in Farming..</h1>
-        <table width="100%" cellspacing="30">
-            <tr>
-                <td>
-                <article>
-                    <a href="https://avantifeeds.com/division-feeds/"><img src="https://avantifeeds.com/v2/wp-content/uploads/2021/05/avantifeedbags.png" height="320" width="90">
-                    <div class="backdrop"></div>
-                    <li>
-                    <span><span class="word"><span>Avanti</span></span></span></a>
-                    </li>
-                </article>
-                </td>
-                <td>
-                    <article>
-                        <a href="https://uniaqua.com.vn/the-uni"><img src="imgs/uni.png" height="320" width="90">
-                            <div class="backdrop"></div>
-                        <li>
-                            <span><span class="word"><span>UNI</span></span></span></a>
-                        </li>
-                    </article>
-                    </td>
-
-                    <td>
-                        <article>
-                            <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html"><img src="imgs/blanca.png" height="370" width="90">
-                                <div class="backdrop"></div>
-                            <li>
-                                <span><span class="word"><span>Blanca</span></span></span></a>
-                            </li>
-                            </article>
-                    </td>       
-                <td>
-                <article>
-                    <a href="https://40count.com/product/i-feed-2sp/"><img src="https://40count.com/wp-content/uploads/2020/08/IMG_7801-2-scaled.jpg" height="320" width="90">
-
-                        <div class="backdrop"></div>
-                    <li>
-                        <span><span class="word"><span>Ifeed</span></span></span></a>
-                    </li>
-                </article>
-                </td>
-                <td>
-                    <article>
-                        <a href="https://growelgroup.com/wp-content/uploads/2022/10/Nutriva-1.pdf"><img src="https://growelgroup.com/wp-content/uploads/2022/10/Nutriva-1.jpg" height="320" width="90">
-            
-                            <div class="backdrop"></div>
-                        <li>
-                            <span><span class="word"><span>Growel</span></span></span></a>
-                        </li>
-                    </article>
-                    </td>
-            </tr>
-        </table>
+        <div class="feed-grid">
+            <div class="feed-item">
+                <a href="https://avantifeeds.com/division-feeds/">
+                    <img src="https://avantifeeds.com/v2/wp-content/uploads/2021/05/avantifeedbags.png" alt="Avanti Prawn Feed">
+                    <div class="word">Avanti</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://uniaqua.com.vn/the-uni">
+                    <img src="imgs/uni.png" alt="UNI Prawn Feed">
+                    <div class="word">UNI</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://www.indiamart.com/proddetail/blanca-7703-21172532912.html">
+                    <img src="imgs/blanca.png" alt="Blanca Prawn Feed">
+                    <div class="word">Blanca</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://40count.com/product/i-feed-2sp/">
+                    <img src="https://40count.com/wp-content/uploads/2020/08/IMG_7801-2-scaled.jpg" alt="Ifeed Prawn Feed">
+                    <div class="word">Ifeed</div>
+                </a>
+            </div>
+            <div class="feed-item">
+                <a href="https://growelgroup.com/wp-content/uploads/2022/10/Nutriva-1.pdf">
+                    <img src="https://growelgroup.com/wp-content/uploads/2022/10/Nutriva-1.jpg" alt="Growel Prawn Feed">
+                    <div class="word">Growel</div>
+                </a>
+            </div>
+        </div>
 
     <!-- /* closing the  feeds section*/ -->
+    </div>
 <h1>Most asked questions in Aqua Farming</h1>
 <br>
 <!-- questions startin -->
@@ -476,7 +425,9 @@
         <br>
         <div id="Map"></div>
             <h1 style="font-family: cursive;">Aerial View..</h1>
-            <iframe width="870" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7876.748008361589!2d81.50660159677098!3d16.46255755553412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a362cac0ef19107%3A0xa55f02532a22dace!2sRamayanapuram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1694281172854!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="responsive-iframe">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7876.748008361589!2d81.50660159677098!3d16.46255755553412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a362cac0ef19107%3A0xa55f02532a22dace!2sRamayanapuram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1694281172854!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         <br>
         <br>
         <br>
@@ -485,5 +436,8 @@
         <div id="contact Us"></div>
             <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
             <div class="elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e"></div>
+            
+    <!-- Navigation script for mobile menu -->
+    <script src="js/navigation.js"></script>
     </body>
 </html>
