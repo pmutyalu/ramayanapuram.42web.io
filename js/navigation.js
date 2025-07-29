@@ -3,16 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navClose = document.getElementById('nav-close');
+    const header = document.querySelector('.header');
     
     // Function to close mobile menu
     function closeMobileMenu() {
         navMenu.classList.remove('active');
+        header.classList.remove('menu-active');
         document.body.style.overflow = ''; // Re-enable scrolling
     }
     
     // Function to open mobile menu
     function openMobileMenu() {
         navMenu.classList.add('active');
+        header.classList.add('menu-active');
         document.body.style.overflow = 'hidden'; // Disable scrolling when menu is open
     }
     
