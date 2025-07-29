@@ -5,20 +5,14 @@
     box-sizing: border-box;
 }
 
-.word {
-    color: #d0f4e3;
-    transition: all 0.3s ease;
+html {
+    margin: 0;
+    padding: 0;
 }
 
-/* Removed word hover effects */
-
-*{
-    font-family: 'Dosis', sans-serif;
-    font-family: 'EB Garamond', serif;
-    text-decoration: wavy;
-}
-
-body{
+body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
     min-height: 100vh;
     padding-top: 70px;
@@ -27,8 +21,21 @@ body{
     overflow-x: hidden;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+.word {
+    color: #d0f4e3;
+    transition: all 0.3s ease;
+}
+
+/* Removed word hover effects */
+
+* {
+    font-family: 'Dosis', sans-serif;
+    font-family: 'EB Garamond', serif;
+    text-decoration: wavy;
 }
 
 /* Container for responsive layout */
@@ -572,7 +579,7 @@ h3 span:nth-child(8)
 /* Header styles - Responsive */
 .header {
     display: flex !important;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #f3f2f2;
     padding: 10px 20px;
@@ -587,6 +594,14 @@ h3 span:nth-child(8)
     visibility: visible !important;
 }
 
+.header img {
+    position: absolute;
+    left: 20px;
+    height: clamp(40px, 8vw, 60px);
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
 .header a {
     text-decoration: none;
     font-size: clamp(16px, 2.5vw, 25px);
@@ -594,12 +609,6 @@ h3 span:nth-child(8)
     margin: 0 10px;
     padding: 8px 12px;
     border-radius: 4px;
-}
-
-.header img {
-    height: clamp(40px, 8vw, 60px);
-    width: auto;
-    transition: transform 0.3s ease;
 }
 
 .header img:hover {
@@ -615,6 +624,8 @@ h3 span:nth-child(8)
     border: none;
     padding: 8px;
     border-radius: 4px;
+    position: absolute;
+    right: 20px;
 }
 
 /* Show hamburger only on mobile */
