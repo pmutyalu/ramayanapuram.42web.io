@@ -269,7 +269,7 @@ table {
 }
 
 .map-card h1 {
-    font-family: cursive;
+    font-family: 'EB Garamond', serif;
     color: #2c3e50;
     margin-bottom: 20px;
     text-align: center;
@@ -698,6 +698,113 @@ button:not(.nav-toggle):not(.nav-close):not(#okButton) {
     border-radius: 6px !important;
     cursor: pointer !important;
     font-weight: 600 !important;
+}
+
+/* Beautiful animated submit button for contact form - Multiple targeting approaches */
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button[type="submit"],
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e input[type="submit"],
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .btn,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .submit-btn,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .button,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e [role="button"] {
+    --color-text: #ffffff !important;
+    --color-background: #ff135a !important;
+    --color-outline: #ff145b80 !important;
+    --color-shadow: #00000080 !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 30px !important;
+    text-decoration: none !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: var(--color-text) !important;
+    background: var(--color-background) !important;
+    transition: all 0.5s ease !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 0.2em 0 var(--color-background) !important;
+    border: none !important;
+    cursor: pointer !important;
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 40px !important;
+}
+
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button:hover,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e input[type="submit"]:hover,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .btn:hover,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .submit-btn:hover,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .button:hover,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e [role="button"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 0 0.6em 0 var(--color-background) !important;
+    animation: btn-pulse 1s ease-in-out !important;
+}
+
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e input[type="submit"]::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .btn::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .submit-btn::after {
+    content: ' →' !important;
+    margin-left: 5px !important;
+    transition: all 0.3s ease !important;
+    transform: translateX(-10px) !important;
+    opacity: 0 !important;
+}
+
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button:hover::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e input[type="submit"]:hover::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .btn:hover::after,
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e .submit-btn:hover::after {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+    margin-left: 10px !important;
+}
+
+/* Alternative targeting for dynamically loaded content */
+div[class*="elfsight"] button,
+div[id*="elfsight"] button,
+[class*="contact"] button,
+[id*="contact"] button {
+    --color-text: #ffffff !important;
+    --color-background: #ff135a !important;
+    background: var(--color-background) !important;
+    color: var(--color-text) !important;
+    border-radius: 50px !important;
+    padding: 10px 25px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+}
+
+div[class*="elfsight"] button:hover,
+div[id*="elfsight"] button:hover,
+[class*="contact"] button:hover,
+[id*="contact"] button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(255, 19, 90, 0.4) !important;
+}
+
+/* Button animation keyframes */
+@keyframes btn-pulse {
+    0% {
+        box-shadow: 0 0 0.2em 0 var(--color-background);
+        outline: 0.1em solid transparent;
+        outline-offset: 0;
+    }
+    50% {
+        box-shadow: 0 0 0.6em 0 var(--color-background);
+        outline: 0.1em solid var(--color-outline);
+        outline-offset: 0.1em;
+    }
+    100% {
+        box-shadow: 0 0 0.4em 0 var(--color-background);
+        outline: 0.1em solid transparent;
+        outline-offset: 0.2em;
+    }
 }
 
 /* Removed button hover effects */
