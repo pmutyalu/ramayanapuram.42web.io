@@ -98,9 +98,8 @@
       background-color: #ff8aa1;
     }
   
-  .card:hover {
-    transform: scale(1.02);
-  }
+  /* Removed card hover effects */
+  
   .card h3 {
       margin-left: 30px; /* Added margin to create space between the arrow icon and text */
     

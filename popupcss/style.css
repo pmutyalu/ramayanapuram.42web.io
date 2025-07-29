@@ -84,19 +84,11 @@ button::before {
   border-radius: 50%;
 }
 
-button:hover {
-  color: white;
-}
+/* Removed button hover effects */
 
 button:before {
   top: 100%;
   left: 100%;
-  transition: .3s all;
-}
-
-button:hover::before {
-  top: -30px;
-  left: -30px;
 }
 
 /* Mobile responsiveness for popup */

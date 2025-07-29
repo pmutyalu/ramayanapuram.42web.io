@@ -5,9 +5,12 @@
     box-sizing: border-box;
 }
 
-.word:hover {
+.word {
     color: #d0f4e3;
+    transition: all 0.3s ease;
 }
+
+/* Removed word hover effects */
 
 *{
     font-family: 'Dosis', sans-serif;
@@ -53,9 +56,7 @@ html{
     animation: scroll 40s linear infinite;
 }
 
-.slide-track:hover {
-    animation-play-state: paused;
-}
+/* Removed slide-track hover effects */
 
 @keyframes scroll{
     0%{
@@ -84,21 +85,23 @@ img{
     border-radius: 8px;
 }
 
-img:hover{
+/* Image hover effects */
+img:hover {
     transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 video{
     width: 100%;
     height: auto;
     max-width: 100%;
-    transition: transform 0.3s ease;
     border-radius: 8px;
 }
 
-video:hover{
-    transform: scale(1.05);
-}
+/* Removed video hover effects */
+
 .slider::before,
 .slider::after{
     background: linear-gradient (to right, rgba(255, 255, 255, 1)0%,
@@ -137,9 +140,7 @@ video:hover{
     white-space: nowrap;
 }
 
-.slide:hover .slide-text {
-    display: block;
-}
+/* Removed slide hover effects */
 
 .slide img,
 .slide video {
@@ -147,12 +148,14 @@ video:hover{
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.slide:hover img,
-.slide:hover video {
-    transform: scale(1.05);
+.slide img:hover {
+    transform: scale(1.08);
 }
+
+/* Removed slide hover image/video effects */
 
 /* Responsive feed tables - Convert to grid layout */
 .feeds-container {
@@ -176,19 +179,35 @@ video:hover{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: white;
     padding: 15px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .feed-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 .feed-item img {
     width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
+    height: 180px;
+    max-height: 180px;
+    object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feed-item:hover img {
+    transform: scale(1.1);
+}
+
+.feed-item:hover .word {
+    transform: scale(1.1);
+    color: #2e7d32;
+    font-weight: bold;
 }
 
 .feed-item a {
@@ -200,6 +219,7 @@ video:hover{
     font-size: clamp(14px, 2vw, 18px);
     font-weight: 600;
     color: #333;
+    transition: all 0.3s ease;
 }
 
 /* Remove old table styles and replace with grid */
@@ -237,35 +257,78 @@ table {
 
 /* Tablet styles */
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
     .header {
-        padding: 10px 15px;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #f3f2f2;
-        flex-direction: column;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-    
-    .header a {
-        margin: 0;
         padding: 15px 20px;
-        border-bottom: 1px solid rgba(14, 10, 10, 0.1);
-        width: 100%;
-        text-align: center;
+        height: 70px;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    .nav-menu {
+        display: none !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(243, 242, 242, 0.98);
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1001;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    /* Hide navigation links when menu is not active */
+    .nav-menu a {
+        display: none !important;
+    }
+    
+    /* Show mobile navigation when active */
+    .nav-menu.active {
+        display: flex !important;
+        flex-direction: column !important;
+        opacity: 1;
+        visibility: visible;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: rgba(243, 242, 242, 0.98) !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 1001 !important;
+    }
+    
+    .nav-menu.active .nav-close {
+        display: flex !important;
+    }
+    
+    /* Show navigation links when menu is active */
+    .nav-menu.active a {
+        display: block !important;
+        margin: 15px 0 !important;
+        padding: 15px 30px !important;
+        border-bottom: none !important;
+        width: auto !important;
+        text-align: center !important;
+        font-size: 20px !important;
+        border-radius: 8px !important;
+        color: rgb(14, 10, 10) !important;
+        text-decoration: none !important;
+        min-width: 200px !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
     }
     
     .feed-grid {
@@ -294,15 +357,34 @@ table {
 /* Mobile styles */
 @media screen and (max-width: 480px) {
     body {
-        padding-top: 60px;
+        padding-top: 70px;
     }
     
     .header {
-        padding: 8px 10px;
+        padding: 12px 15px;
+        height: 60px;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
     }
     
     .header img {
-        height: 35px;
+        height: 40px;
+        width: auto;
+    }
+    
+    .nav-close {
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .header a {
+        font-size: 20px;
+        margin: 12px 0;
+        padding: 12px 25px;
     }
     
     .feed-grid {
@@ -312,10 +394,12 @@ table {
     
     .feed-item {
         padding: 10px;
+        height: 180px;
     }
     
     .feed-item img {
-        max-height: 120px;
+        height: 100px;
+        max-height: 100px;
     }
     
     .slider {
@@ -345,6 +429,17 @@ table {
     
     h1 {
         margin: 15px 0;
+    }
+    
+    /* Contact form mobile styling */
+    .elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e {
+        padding: 15px !important;
+        margin: 0 10px !important;
+    }
+    
+    .elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
     }
 }
 
@@ -433,7 +528,7 @@ h3 span:nth-child(8)
 
 /* Header styles - Responsive */
 .header {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     background-color: #f3f2f2;
@@ -445,6 +540,8 @@ h3 span:nth-child(8)
     z-index: 1000;
     text-decoration: overline;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    visibility: visible !important;
 }
 
 .header a {
@@ -454,16 +551,16 @@ h3 span:nth-child(8)
     margin: 0 10px;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.header a:hover {
-    background-color: rgba(14, 10, 10, 0.1);
 }
 
 .header img {
     height: clamp(40px, 8vw, 60px);
     width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header img:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* Mobile navigation */
@@ -473,7 +570,31 @@ h3 span:nth-child(8)
     cursor: pointer;
     background: none;
     border: none;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Show hamburger only on mobile */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        z-index: 1002;
+        flex-direction: column;
+        padding: 8px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    .nav-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(14, 10, 10);
+        margin: 3px 0;
+        border-radius: 2px;
+        display: block;
+    }
 }
 
 .nav-toggle span {
@@ -481,12 +602,78 @@ h3 span:nth-child(8)
     height: 3px;
     background-color: rgb(14, 10, 10);
     margin: 3px 0;
-    transition: 0.3s;
+    border-radius: 2px;
+    /* No transitions or animations */
 }
 
+/* Desktop navigation menu */
 .nav-menu {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    position: static;
+    background: none;
+    flex-direction: row !important;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close button for mobile menu */
+.nav-close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgb(14, 10, 10);
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(14, 10, 10);
+    padding: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1003;
+}
+
+/* Show close button when menu is active */
+.nav-menu.active .nav-close {
+    display: flex !important;
+}
+
+/* Contact form and general button improvements */
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e button,
+button:not(.nav-toggle):not(.nav-close):not(#okButton) {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+}
+
+/* Removed button hover effects */
+
+/* Contact form styling improvements */
+.elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Contact section centering */
+#contact {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Responsive Typography */

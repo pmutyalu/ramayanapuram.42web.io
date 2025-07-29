@@ -20,10 +20,7 @@
             <!-- styles for questions -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
             <link rel="stylesheet" href="questionscss/style.css" />
-
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/mmLHZpsYMDHeq4D6/scene.splinecode"></spline-viewer>
-
+            
 </head>
     <body>
 
@@ -33,12 +30,12 @@
             <img src="popupimage/logo.png" loading="lazy" alt="404-tick" />
             <!-- <h3><b>𝐺𝑟𝑒𝑎𝑡 𝑡𝑜 𝑠𝑒𝑒 𝑦𝑜𝑢 ℎ𝑒𝑟𝑒!</h3><br> -->
             <p>Welcome This video is a little peek into our project <b>AQUAYODHA </b></p>
-            <p>To visit the website click on visit website..</p>
+            <a href="https://www.youtube.com/@Aqua_Yodha" target="_blank" style="color: #333; text-decoration: underline; font-weight: bold;">Visit our YouTube Channel</a>
             <div class="responsive-iframe" style="padding-bottom: 50%; margin: 10px 0;">
                 <iframe src="https://www.youtube.com/embed/XVfSe9UuyF4" title="eYIC#197 Prototyping Sprint" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <button onclick="closePopup()" type="button" id="okButton">
-              <span>Visit Website</span>
+              <span>Close</span>
             </button>
         </div>
         <script src="popupjs/main.js"></script>
@@ -46,7 +43,7 @@
 
         <!-- pop-up ends here -->
         <div class="header">
-            <img src="https://thenounproject.com/api/private/icons/4974962/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0" alt="Logo">
+            <img src="imgs/Logo.png" alt="Logo">
             
             <button class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -55,6 +52,7 @@
             </button>
             
             <nav class="nav-menu" id="nav-menu">
+                <button class="nav-close" id="nav-close">&times;</button>
                 <a href="#Home">Home</a>
                 <a href="#Feeds">Feeds</a>
                 <a href="#Weather">Weather</a>
@@ -410,14 +408,15 @@
 
 <!-- questions ending -->
 
-    </center>
         <br>
         <br>
         <div id="Weather"></div>
-            <h1 style="font-family: cursive;">Weather Forecast...</h1>
-        <br>
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-            <div class="elfsight-app-4564c523-ebe9-4c55-bdd8-e691918e21cc"></div>
+            <div style="text-align: center;">
+                <h1 style="font-family: cursive;">Weather Forecast...</h1>
+            <br>
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-4564c523-ebe9-4c55-bdd8-e691918e21cc"></div>
+            </div>
         <br>
         <br>
         <br>
@@ -434,8 +433,11 @@
         <br>
         <br>
         <div id="contact Us"></div>
-            <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-            <div class="elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e"></div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
+                <h1 style="font-family: cursive; margin-bottom: 20px;">Contact Us</h1>
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-d1259484-a5e0-448e-a6da-0b2e8f67d17e"></div>
+            </div>
             
     <!-- Navigation script for mobile menu -->
     <script src="js/navigation.js"></script>
