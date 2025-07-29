@@ -109,6 +109,13 @@ video{
     cursor: pointer;
     pointer-events: auto;
     z-index: 10;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 video:focus {
@@ -181,7 +188,7 @@ video::-webkit-media-controls-panel {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slide video {
@@ -196,8 +203,23 @@ video::-webkit-media-controls-panel {
     outline-offset: 2px;
 }
 
-.slide img:hover {
+/* Hover effects for both images and videos */
+.slide img:hover,
+.slide video:hover {
     transform: scale(1.08);
+    filter: brightness(1.1) contrast(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional hover effect for the entire slide */
+.slide:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.slide:hover img,
+.slide:hover video {
+    transform: scale(1.05);
 }
 
 /* Video controls should always be accessible */
@@ -210,8 +232,6 @@ video::-webkit-media-controls-panel {
     pointer-events: auto !important;
     z-index: 20;
 }
-
-/* Removed slide hover image/video effects */
 
 /* Responsive feed tables - Convert to grid layout */
 .feeds-container {
